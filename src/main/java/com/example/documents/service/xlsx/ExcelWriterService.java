@@ -1,6 +1,6 @@
-package com.example.documents.xlsx;
+package com.example.documents.service.xlsx;
 
-import com.example.documents.Employee;
+import com.example.documents.model.Employee;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -19,7 +19,7 @@ import java.util.TreeMap;
 @Service
 public class ExcelWriterService {
 
-    public void createExcel(List<Employee> employees) {
+    public void createXlsxDocument(List<Employee> employees) {
         try {
             Workbook workbook = new XSSFWorkbook();
 

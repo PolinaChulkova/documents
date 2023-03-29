@@ -1,6 +1,6 @@
-package com.example.documents.docx;
+package com.example.documents.service.docx;
 
-import com.example.documents.Employee;
+import com.example.documents.model.Employee;
 import org.apache.poi.xwpf.model.XWPFHeaderFooterPolicy;
 import org.apache.poi.xwpf.usermodel.ParagraphAlignment;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
@@ -18,7 +18,7 @@ import java.util.List;
 
 @Service
 public class WordWriterService {
-    public void createWord(List<Employee> employees) {
+    public void createDocxDocument(List<Employee> employees) {
         try {
             // создаем модель docx документа,
             // к которой будем прикручивать наполнение (колонтитулы, текст)

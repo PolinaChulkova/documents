@@ -1,9 +1,10 @@
-package com.example.documents;
+package com.example.documents.controller;
 
-import com.example.documents.docx.WordReaderService;
-import com.example.documents.docx.WordWriterService;
-import com.example.documents.xlsx.ExcelReaderService;
-import com.example.documents.xlsx.ExcelWriterService;
+import com.example.documents.service.EmployeeService;
+import com.example.documents.service.docx.WordReaderService;
+import com.example.documents.service.docx.WordWriterService;
+import com.example.documents.service.xlsx.ExcelReaderService;
+import com.example.documents.service.xlsx.ExcelWriterService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,21 +24,21 @@ public class Controller {
 
     @PostMapping("generate-docx")
     public void generateWord() {
-        wordWriterService.createWord(employeeService.addEmployees());
+        wordWriterService.createDocxDocument(employeeService.addEmployees());
     }
 
     @GetMapping("read-docx")
     public void readWord() {
-        wordReaderService.readWordDocument();
+        wordReaderService.readDocxDocument();
     }
 
     @PostMapping("generate-xlsx")
     public void generateExcel() {
-        excelWriterService.createExcel(employeeService.addEmployees());
+        excelWriterService.createXlsxDocument(employeeService.addEmployees());
     }
 
     @GetMapping("read-xlsx")
     public void readExcel() {
-        excelReaderService.readExcelDocument();
+        excelReaderService.readXlsxDocument();
     }
 }

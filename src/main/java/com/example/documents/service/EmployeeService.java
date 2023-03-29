@@ -1,5 +1,7 @@
-package com.example.documents;
+package com.example.documents.service;
 
+import com.example.documents.model.Employee;
+import com.example.documents.repository.EmployeeRepo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

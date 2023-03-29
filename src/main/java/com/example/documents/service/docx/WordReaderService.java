@@ -1,4 +1,4 @@
-package com.example.documents.docx;
+package com.example.documents.service.docx;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.openxml4j.opc.OPCPackage;
@@ -16,7 +16,7 @@ import java.util.List;
 
 @Service
 public class WordReaderService {
-    public void readWordDocument() {
+    public void readDocxDocument() {
         try(FileInputStream inputStream = new FileInputStream("testFile2.docx")) {
             XWPFDocument document = new XWPFDocument(OPCPackage.open("testFile2.docx"));
             XWPFHeaderFooterPolicy headerFooterPolicy = new XWPFHeaderFooterPolicy(document);
