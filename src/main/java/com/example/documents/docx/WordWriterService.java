@@ -1,5 +1,6 @@
-package com.example.documents;
+package com.example.documents.docx;
 
+import com.example.documents.Employee;
 import org.apache.poi.xwpf.model.XWPFHeaderFooterPolicy;
 import org.apache.poi.xwpf.usermodel.ParagraphAlignment;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
